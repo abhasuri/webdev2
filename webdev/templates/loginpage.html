@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'style.css' %}"> <title>Login</title>
+    </head>
+    <body>
+        <form method='POST' action='/home'>
+            {% csrf_token %}
+        <div class="main-login">
+            <div class="left-login">
+                <h3>Discounts for students:<br>coz we understand your struggle<br>...and your EMPTY WALLET!</h3>
+                <img src="\static\wallet-attention.jfif" class="left-login-image" alt="Imagem animada">
+            </div>
+
+            <div class="right-login">
+                <div class="card-login">
+                    <h1>LOGIN</h1>
+                    <div class="textfield">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" placeholder="Your cool username">
+                    </div>
+                    <div class="textfield">
+                        <label for="password">Password</label>
+                        <input type="password" name="pswd" placeholder="Secret code to login">
+                    </div>
+                    <button class="btn-login">Let's save</button>
+                </div>
+            </div>
+        </div>
+        </form>
+    </body>
+</html>
